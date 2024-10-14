@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  list-style-type: none;
+  
+}
+input:focus {
+  outline: none;
+}
+
+.home-page
+{
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  background: url('https://img.freepik.com/premium-vector/abstract-background-dynamic-shape-decoration_583398-408.jpg') no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  align-items: center;
+  position: relative;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.header-home-page
+{
+    width: 100%;
+    height: 10%;
+    display: flex;
+}
+.prosmotr-link
+{
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+.prosmotr-link:hover
+{
+  text-decoration: underline;
+}
+.opisanie-link
+{
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px;
+}
+.opisanie-link:hover
+{
+  text-decoration: underline;
+}
+.bisnes-link
+{
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 15px;
+}
+.bisnes-link:hover
+{
+  text-decoration: underline;
+}
+.blog-link
+{
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px;
+}
+.blog-link:hover
+{
+  text-decoration: underline;
+}
+.button-login:hover
+{
+  background-color: #051e63 !important;
+}
+.button-registr:hover
+{
+  background-color: rgba( 165, 165, 165, 0.6) !important;
+}
+.button-login:disabled
+{
+   opacity: 0.7 !important;
+   color: white !important;
+}
+.button-registr:disabled
+{
+   opacity: 0.7 !important;
+}
+.p-anim
+{
+  transition: all 1s;
+}
+.form-login
+{
+  background: url('https://img.freepik.com/free-vector/polygonal-3d-background-in-blue-tones_23-2148385446.jpg') no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.submitlog:hover
+{
+  background-color: #1a45dd !important;
+}
+.ideas-page
+{
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('https://img.freepik.com/premium-vector/abstract-background-dynamic-shape-decoration_583398-408.jpg') no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  overflow-x:hidden;
+}
+#header-ideas-page
+{
+  width: 100vw;
+  height: 100px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+.wrapper-input-ideas
+{
+  
+  width: 70%;
+  height: 50%;
+  position: relative;
+  margin-left: 100px;
+}
+.input-ideas
+{
+   width: 100%;
+   height: 100%;
+   background: #c6d1f7;
+   border-radius: 20px;
+   border: none;
+   font-size: 16px;
+   color:#051e63;
+   padding-left: 30px;
+   font-weight: 700;
+}
+.input-ideas:focus
+{
+  border: 2px solid #051e63;
+}
+.input-ideas::placeholder
+{
+   color:#051e63;
+   font-weight: 500;
+}
+.ideas-result
+{
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 400px);
+  justify-content: center;
+  
+}
+.pin-object
+{
+  width: 400px;
+  height: 400px;
+  min-width: 400px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black
+}
+.pin-image:hover
+{
+  border: 2px solid rgb(0, 0, 0, 0.8) !important;
+}
+.ideas-header-selector
+{
+  margin-left: 30px;
+  border: 3px solid #c6d1f7;
+  border-radius: 10px;
+}
+.ideas-header-selector:hover
+{
+    outline: none;
+    border: 3px solid #959fbf;
+}
+.pagination-element
+{
+    width: 80%;
+    height: 100px;
+ 
+    display: flex;
+    gap: 5px;
+}
+.pagination-uncurrent
+{
+  width: 50px;
+  height: 50px;
+}
+.pagination-current
+{
+  width: 50px;
+  height: 50px;
+   background-color: #1a45dd;
+}
+@media (max-width: 1580px)
+{
+  .ideas-result
+  {
+    grid-template-columns: repeat(3, 400px);
+  }
+}
+@media (max-width: 1180px)
+{
+  .ideas-result
+  {
+    grid-template-columns: repeat(2, 400px);
+  }
+}
