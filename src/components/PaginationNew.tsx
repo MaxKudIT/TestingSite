@@ -1,9 +1,8 @@
 import React, { FC, useEffect, useState } from "react";
 const PaginationNew: FC<{getMinValue: (num: number) => void, length: number, getMaxValue: (num: number) => void}> = ({getMinValue, getMaxValue, length}) =>
   {
-    console.log('rerender2!')
     const [currentElement, setCurrent] = useState(0);
-    const totalJSX = Math.floor(length/12) 
+    const totalJSX = Math.floor(length/7) 
     let value = 1;
     let array: number[] = [1]
        
@@ -29,7 +28,7 @@ const PaginationNew: FC<{getMinValue: (num: number) => void, length: number, get
     
     return (
       <div className="pagination-element">
-        {array.map((el, index) => <button onClick={() => {getMinValue(index * 12); getMaxValue(el * 12); setCurrent(index)}} className={checkedPage(index)}>{el}</button>)}
+        {array.map((el, index) => <button onClick={() => {getMinValue(index * 7); getMaxValue(el * 7); setCurrent(index)}} className={checkedPage(index)}>{el}</button>)}
       </div>
     )
   }

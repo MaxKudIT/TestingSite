@@ -11,6 +11,7 @@
     "@types/node": "^16.18.113",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
+    "animejs": "^3.2.2",
     "antd": "^5.21.3",
     "antd-style": "^3.7.0",
     "react": "^18.3.1",
@@ -44,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/animejs": "^3.1.12"
   }
 }

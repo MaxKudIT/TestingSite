@@ -9,9 +9,8 @@ const Pin: FC<PinProps> = ({pin, name}) =>
 {
     return (
       <>
-      <Link to={'/'} className="pin-object">
-        <p style={{fontWeight: '500', fontSize: '30px', paddingBottom: '10px'}}>{name}</p>
-        <img className="pin-image" style={{width: '85%', height: '60%', minHeight: '250px', borderRadius: '25px', border: '1px solid rgb(0, 0, 0, 0.2)', backgroundSize: 'cover'}} src={pin} alt=""/>
+      <Link to={'/pin/:id'} className="pin-object" >
+        <img className="pin-image" style={{width: '250px', borderRadius: '25px', border: '1px solid rgb(0, 0, 0, 0.2)', backgroundSize: 'cover', height: 'auto'}} src={pin} alt=""/>
       </Link>
       </>
     )

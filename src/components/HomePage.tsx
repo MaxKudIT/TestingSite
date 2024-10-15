@@ -6,6 +6,8 @@ import Circle from "./Circle";
 import CircleList from "./CircleList";
 import ModalWindowRegistration from "./ModalWindowRegistration";
 import logo from '../images/logo.png'
+import ImageAnimation from "./ImageAnimation";
+
 const HomePage = () =>
   {
     const [current, setCurrent] = useState(0)
@@ -29,7 +31,7 @@ const HomePage = () =>
         <>
           <ChangedHeader keyX={current} array={arrayText}/>
           <CircleList getdata={getCurrent}/>
-        
+          <ImageAnimation index={current}/>
         </> 
         
         }

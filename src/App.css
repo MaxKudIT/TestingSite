@@ -169,18 +169,40 @@ input:focus {
 .ideas-result
 {
   width: 100%;
-
-  display: grid;
-  grid-template-columns: repeat(4, 400px);
+  display: flex;
   justify-content: center;
-  
 }
+.ideas-result-0
+{
+  height: 100%;
+  width: 280px;
+}
+.ideas-result-1
+{
+  height: 100%;
+  width: 280px;
+}
+.ideas-result-2
+{
+  height: 100%;
+  width: 280px;
+}
+.ideas-result-3
+{
+  height: 100%;
+  width: 280px;
+}
+.ideas-result-4
+{
+  height: 100%;
+  width: 280px;
+}
+
 .pin-object
 {
-  width: 400px;
-  height: 400px;
-  min-width: 400px;
-  min-height: 400px;
+  margin: 10px 0;
+  height: auto;
+  min-width: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,36 +224,84 @@ input:focus {
     outline: none;
     border: 3px solid #959fbf;
 }
+
 .pagination-element
 {
     width: 80%;
     height: 100px;
- 
+    margin-bottom: 20px;
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 .pagination-uncurrent
 {
   width: 50px;
   height: 50px;
+  border-radius: 50%;
+  background-color: rgba( 165, 165, 165, 0.2);
+  font-size: 17px;
+  border: 2px solid #1a45dd;
+}
+.pagination-uncurrent:hover
+{
+    background-color: rgba( 165, 165, 165, 0.5);
+    font-weight: 600;
 }
 .pagination-current
 {
   width: 50px;
   height: 50px;
-   background-color: #1a45dd;
+  background-color: #1a45dd;
+  border-radius: 50%;
+  border: 2px solid #1a45dd;
+  font-size: 20px;
+  color: white;
+  transform: scale(1.1, 1.1);
+}
+.pagination-current:hover
+{
+  font-weight: 600;
+}
+.image-carousel
+{
+    margin-top: 20px;
+    width: 90%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+}
+.image-carousel img
+{
+    margin: 0 7px;
+}
+.image-homepage
+{
+  width: 350px;
+  height: 100%;
+}
+.pin-data-page
+{
+  width: 100vw;
+  height: 100vh;
+  background: url('https://img.freepik.com/premium-vector/abstract-background-dynamic-shape-decoration_583398-408.jpg') no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 @media (max-width: 1580px)
 {
-  .ideas-result
+  .pin-object
   {
-    grid-template-columns: repeat(3, 400px);
+    
   }
 }
-@media (max-width: 1180px)
+@media (max-width: 900px)
 {
   .ideas-result
   {
-    grid-template-columns: repeat(2, 400px);
+      flex-wrap: nowrap;
   }
 }
