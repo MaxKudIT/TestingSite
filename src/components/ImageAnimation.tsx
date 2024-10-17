@@ -64,7 +64,7 @@ const ImageAnimation:FC<{index: number}> = ({index}) =>
       }
     return (
         <div className="image-carousel">
-        {calculateImages(index)?.map(el => <img className="image-homepage" src={el} alt=""/>)}
+        {calculateImages(index)?.map((el, key) => <img key={key} className="image-homepage" src={el} alt=""/>)}
 
         </div>
     )

@@ -1,20 +1,22 @@
 import { Button, Form, Input, Select } from "antd";
-import React from "react";
+import React, { FC } from "react";
 import { FieldType } from "./ModalWindowLogin";
-const ModalWindowRegistration = () =>
+const ModalWindowRegistration: FC<React.FormHTMLAttributes<HTMLFormElement>> = ({...props}) =>
   {
+    
     const { Option } = Select;
     return (
         <Form
+        {...props}
         name="basic"
         className="form-login"
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
-        style={{ width: '600px', height: '700px', borderRadius: '50px', display: 'flex', flexDirection: 'column', justifyContent: 'center', top: '90px'}}
+        style={{ width: '600px', height: '700px', borderRadius: '50px', display: 'flex', flexDirection: 'column', justifyContent: 'center', top: '90px',  position: 'absolute', zIndex: '2'}}
         initialValues={{ remember: true }}
         autoComplete="off"
       >
-         <p style={{color: 'white', marginLeft: '165px', marginBottom: '30px', fontSize: '25px', fontWeight: '500'}}>Добро пожаловать в Collage</p>
+         <p style={{color: '#1a45dd', marginLeft: '165px', marginBottom: '30px', fontSize: '25px', fontWeight: '500'}}>Добро пожаловать в Collage</p>
          <Form.Item<FieldType>
           label="Username"
           name="username"
@@ -41,7 +43,7 @@ const ModalWindowRegistration = () =>
         </Select>
       </Form.Item>
       <Form.Item style={{marginRight: '100px'}} wrapperCol={{ offset: 8, span: 16 }}>
-          <Button className="submitlog" style={{background: 'rgba( 165, 165, 165, 0.2)', border: '1px solid white', marginTop: '30px'}} type="primary" htmlType="submit">
+          <Button className="submitlog" style={{background: 'rgba( 165, 165, 165, 0.2)', border: '2px solid  #1a45dd', color: '#1a45dd', marginTop: '30px'}} type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>

@@ -29,7 +29,7 @@ const arrayCircle = ['#0659a2', '#3b8805', '#967105', '#b33306']
     }, [])
     return (
      <div style={{width: '150px', height: '25px', display: 'flex', gap: '20px', alignItems: 'center', justifyContent: 'center', marginTop: '30px'}}>
-        {arrayCircle.map((_, key) => <Circle color={checkedCircle(key)}/>)}
+        {arrayCircle.map((_, key) => <Circle key={key} color={checkedCircle(key)}/>)}
      </div>
       
     )

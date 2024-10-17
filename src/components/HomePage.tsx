@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useRef, useState } from "react";
 import HeaderPin from "./Header";
 import ModalWindowLogin from "./ModalWindowLogin";
 import ChangedHeader from "./ChangedHeader";
@@ -22,19 +22,29 @@ const HomePage = () =>
     const getBooly2 = (value: boolean) => {
       setModalReg(value);
     }
+    const calculateBlackout = (modal: boolean) =>
+    {
+        if (modal)
+        {
+          return 'home-page blackout-homepage'
+        }
+        else
+        {
+          return 'home-page'
+        }
+    }
+   
     const arrayText = ['идея блюд на ужин', 'идея домашнего декора', 'идея стильного образа', 'идея садоводов']
     return (
-      <div className="home-page">
+      <div id="lol" onClick={() => {setModal(false); setModalReg(false)}} className={calculateBlackout(modal || modalReg)}>
         <HeaderPin getBool2={getBooly2} getBool={getBooly} logo={logo} name="Collage"/>
-        {modal ? <ModalWindowLogin name="Collage"/> :
-        modalReg ? <ModalWindowRegistration/> : 
-        <>
-          <ChangedHeader keyX={current} array={arrayText}/>
-          <CircleList getdata={getCurrent}/>
-          <ImageAnimation index={current}/>
-        </> 
+        {modal ? <ModalWindowLogin onClick={(e) => {e.stopPropagation()}} name="Collage"/> : modalReg && <ModalWindowRegistration onClick={(e) => {e.stopPropagation()}}/>}
+       <ChangedHeader keyX={current} array={arrayText}/>
+        <CircleList getdata={getCurrent}/>
+        <ImageAnimation index={current}/>
         
-        }
+        
+        
       </div>
     )
   }
